@@ -11,7 +11,7 @@
 // ==/UserScript==
 
 // Change this value to lengthen or shorten the time between refreshes
-var INTERVALTIME = 5000;
+var INTERVALTIME = 30000;
 var CHECKOUT = 1;
 var XBOXON = "https://www.myinstants.com/media/sounds/brian_xbox.mp3";
 var XBOXCOMMERCIAL = "https://www.myinstants.com/media/sounds/xbox-360-novo-comercial-no-brasil.mp3";
