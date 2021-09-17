@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         microsoft.xbox.carthelper.js
 // @namespace    http://tampermonkey.net/
-// @version      2021091704
+// @version      2021091705
 // @description  try to take over the world!
 // @author       You
 // @updateURL    https://raw.githubusercontent.com/krowve/xboxcheckouthelper/main/microsoft.xbox.carthelper.js
@@ -12,7 +12,7 @@
 // ==/UserScript==
 
 // Change this value to lengthen or shorten the time between refreshes
-var INTERVALTIME = 5000;
+var INTERVALTIME = 30000;
 var CHECKOUT = 1;
 var XBOXON = "https://www.myinstants.com/media/sounds/brian_xbox.mp3";
 
