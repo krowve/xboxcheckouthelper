@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         microsoft.xbox.checkouthelper
 // @namespace    http://tampermonkey.net/
-// @version      2021061901
+// @version      2021091701
 // @description  try to take over the world!
 // @author       You
 // @match        https://www.microsoft.com/*
@@ -11,10 +11,10 @@
 // ==/UserScript==
 
 // Change this value to lengthen or shorten the time between refreshes
-var INTERVALTIME = 30000;
+var INTERVALTIME = 5000;
 var CHECKOUT = 1;
-var XBOXON = "https://www.myinstants.com/media/sounds/brian_xbox.mp3"
-var XBOXCOMMERCIAL = "https://www.myinstants.com/media/sounds/xbox-360-novo-comercial-no-brasil.mp3"
+var XBOXON = "https://www.myinstants.com/media/sounds/brian_xbox.mp3";
+var XBOXCOMMERCIAL = "https://www.myinstants.com/media/sounds/xbox-360-novo-comercial-no-brasil.mp3";
 
 (function() {
 
