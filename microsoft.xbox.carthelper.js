@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         microsoft.xbox.carthelper
 // @namespace    http://tampermonkey.net/
-// @version      2021091703
+// @version      2021091704
 // @description  try to take over the world!
 // @author       You
 // @updateURL    https://raw.githubusercontent.com/krowve/xboxcheckouthelper/main/microsoft.xbox.carthelper.js
@@ -33,8 +33,9 @@ var idVar = setInterval(function() {
         if (page.includes("Xbox Series X")) {
             console.log("Xbox in Cart");
             if (CHECKOUT == 1) {
-                console.log("click checkout")
-                window.open(XBOXON)
+                console.log("click checkout");
+                window.open(XBOXON);
+                window.location = "https://www.microsoft.com/en-us/store/checkout"
             }
         }
         CHECKOUT = 0;
