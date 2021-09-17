@@ -1,13 +1,12 @@
 // ==UserScript==
-// @name         microsoft.xbox.checkouthelper
+// @name         microsoft.xbox.carthelper
 // @namespace    http://tampermonkey.net/
 // @version      2021091701
 // @description  try to take over the world!
 // @author       You
-// @updateURL    https://raw.githubusercontent.com/krowve/xboxcheckouthelper/main/microsoft.xbox.checkouthelper.js
-// @downloadURL  https://raw.githubusercontent.com/krowve/xboxcheckouthelper/main/microsoft.xbox.checkouthelper.js
+// @updateURL    https://raw.githubusercontent.com/krowve/xboxcheckouthelper/main/microsoft.xbox.carthelper.js
+// @downloadURL  https://raw.githubusercontent.com/krowve/xboxcheckouthelper/main/microsoft.xbox.carthelper.js
 // @match        https://www.microsoft.com/*
-// @match        https://www.xbox.com/*
 // @icon         https://www.google.com/s2/favicons?domain=microsoft.com
 // @grant        none
 // ==/UserScript==
@@ -16,7 +15,6 @@
 var INTERVALTIME = 5000;
 var CHECKOUT = 1;
 var XBOXON = "https://www.myinstants.com/media/sounds/brian_xbox.mp3";
-var XBOXCOMMERCIAL = "https://www.myinstants.com/media/sounds/xbox-360-novo-comercial-no-brasil.mp3";
 
 (function() {
 
@@ -41,15 +39,6 @@ var idVar = setInterval(function() {
         }
         CHECKOUT = 0;
         window.location = "https://www.microsoft.com/en-us/store/cart";
-    }
-    if (pagetitle.includes("Configure your Xbox Series X")) {
-        if (page.includes("Out of stock")) {
-            console.log("Out of stock");
-        } else {
-            console.log("Cart it");
-            window.open(XBOXCOMMERCIAL)
-        }
-        window.location = "https://www.xbox.com/en-us/configure/8wj714n3rbtl";
     }
 
 },INTERVALTIME);
