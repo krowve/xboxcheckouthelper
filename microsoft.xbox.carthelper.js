@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name         microsoft.xbox.carthelper
+// @name         microsoft.xbox.carthelper.js
 // @namespace    http://tampermonkey.net/
 // @version      2021091704
 // @description  try to take over the world!
@@ -12,7 +12,7 @@
 // ==/UserScript==
 
 // Change this value to lengthen or shorten the time between refreshes
-var INTERVALTIME = 30000;
+var INTERVALTIME = 5000;
 var CHECKOUT = 1;
 var XBOXON = "https://www.myinstants.com/media/sounds/brian_xbox.mp3";
 
@@ -22,25 +22,16 @@ var idVar = setInterval(function() {
     var page = document.documentElement.innerHTML;
     var pagetitle = String(document.title);
     if (pagetitle.includes("Shopping cart - Microsoft Store")) {
-        if (page.includes("This item is out of stock")) {
-            console.log("Item out of stock");
-            CHECKOUT = 0;
-        }
-        if (page.includes("Your cart is empty")) {
-            console.log("Cart is empty");
-            CHECKOUT = 0;
-        }
         if (page.includes("Xbox Series X")) {
             console.log("Xbox in Cart");
-            if (CHECKOUT == 1) {
-                console.log("click checkout");
-                window.open(XBOXON);
-                window.location = "https://www.microsoft.com/en-us/store/checkout"
-            }
+            window.location = "https://www.microsoft.com/en-us/store/checkout"
         }
-        CHECKOUT = 0;
-        window.location = "https://www.microsoft.com/en-us/store/cart";
+    }
+    if (pagetitle.includes("Checking out - Microsoft Store")) {
+        console.log("Place Order Page");
+        window.open(XBOXON);
     }
 
 },INTERVALTIME);
 })();
+
