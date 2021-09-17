@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         microsoft.xbox.carthelper
 // @namespace    http://tampermonkey.net/
-// @version      2021091701
+// @version      2021091702
 // @description  try to take over the world!
 // @author       You
 // @updateURL    https://raw.githubusercontent.com/krowve/xboxcheckouthelper/main/microsoft.xbox.carthelper.js
