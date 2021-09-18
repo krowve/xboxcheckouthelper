@@ -1,12 +1,13 @@
 // ==UserScript==
 // @name         microsoft.xbox.carthelper.js
 // @namespace    http://tampermonkey.net/
-// @version      2021091706
+// @version      2021091707
 // @description  try to take over the world!
 // @author       You
 // @updateURL    https://raw.githubusercontent.com/krowve/xboxcheckouthelper/main/microsoft.xbox.carthelper.js
 // @downloadURL  https://raw.githubusercontent.com/krowve/xboxcheckouthelper/main/microsoft.xbox.carthelper.js
 // @match        https://www.microsoft.com/*
+// @match        https://login.live.com/*
 // @icon         https://www.google.com/s2/favicons?domain=microsoft.com
 // @grant        none
 // ==/UserScript==
@@ -44,6 +45,10 @@ var idVar = setInterval(function() {
     }
     if (pagetitle.includes("Checking out - Microsoft Store")) {
         console.log("Place Order Page");
+    }
+    if (pagetitle.includes("Sign in to your Microsoft account")) {
+        console.log("Sign in Page");
+        document.getElementsByClassName("button")[0].click();
     }
 
 },INTERVALTIME);
