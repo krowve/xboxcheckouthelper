@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         microsoft.xbox.watcher
 // @namespace    http://tampermonkey.net/
-// @version      2021091707
+// @version      2021091709
 // @description  try to take over the world!
 // @author       You
 // @updateURL    https://raw.githubusercontent.com/krowve/xboxcheckouthelper/main/microsoft.xbox.watcher.js
@@ -22,7 +22,7 @@ var idVar = setInterval(function() {
     var page = document.documentElement.innerHTML;
     var pagetitle = String(document.title);
 
-    if (pagetitle.includes("Configure your Xbox Series X")) {
+    if (document.URL.includes("https://www.xbox.com/en-us/configure/8wj714n3rbtl")) {
         if (page.includes("Out of stock")) {
             console.log("Out of stock");
         } else {
@@ -30,9 +30,23 @@ var idVar = setInterval(function() {
             audio = document.createElement("audio");
             audio.src = XBOXON;
             audio.play();
+            document.getElementsByClassName("btn-primary")[0].click()
         }
         window.location = "https://www.xbox.com/en-us/configure/8wj714n3rbtl";
     }
+    if (document.URL.includes("https://www.xbox.com/en-us/configure/8RPM8T9CK0P6")) {
+        if (page.includes("Out of stock")) {
+            console.log("Out of stock");
+        } else {
+            console.log("Cart it");
+            audio = document.createElement("audio");
+            audio.src = XBOXON;
+            audio.play();
+            document.getElementsByClassName("btn-primary")[0].click()
+        }
+        window.location = "https://www.xbox.com/en-us/configure/8wj714n3rbtl";
+    }
+
 
 },INTERVALTIME);
 })();
