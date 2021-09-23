@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         microsoft.xbox.watcher
 // @namespace    http://tampermonkey.net/
-// @version      2021091709
+// @version      2021091710
 // @description  try to take over the world!
 // @author       You
 // @updateURL    https://raw.githubusercontent.com/krowve/xboxcheckouthelper/main/microsoft.xbox.watcher.js
@@ -44,7 +44,7 @@ var idVar = setInterval(function() {
             audio.play();
             document.getElementsByClassName("btn-primary")[0].click()
         }
-        window.location = "https://www.xbox.com/en-us/configure/8wj714n3rbtl";
+        window.location = "https://www.xbox.com/en-us/configure/8RPM8T9CK0P6";
     }
 
 
